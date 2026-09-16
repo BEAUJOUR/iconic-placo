@@ -13,13 +13,15 @@ const sizes = {
 
 export function Logo({ size = "md" }: LogoProps) {
   return (
-    <span className={`relative block shrink-0 overflow-hidden rounded-full ${sizes[size]}`}>
+    <span
+      className={`relative block shrink-0 overflow-hidden border border-walnut/10 bg-[#2f2f2f] ${sizes[size]}`}
+    >
       <Image
         src={assetPath("/images/logo.jpg")}
         alt="ICONIC PLACO"
         fill
         sizes="96px"
-        className="object-cover"
+        className="object-contain"
         priority={size !== "lg"}
       />
     </span>

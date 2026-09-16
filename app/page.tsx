@@ -68,14 +68,14 @@ export default function Home() {
               className="object-cover transition duration-300 hover:scale-[1.015]"
             />
             <div className="absolute inset-y-0 right-0 w-3 bg-champagne" />
-            <div className="absolute bottom-5 right-5 max-w-[260px] border border-goldline bg-warm/92 p-4 shadow-soft backdrop-blur">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-champagne">
+            <div className="absolute bottom-5 right-5 max-w-[280px] border border-champagne bg-cream p-5 shadow-[0_18px_45px_rgba(52,47,42,0.22)]">
+              <p className="text-xs font-black uppercase tracking-[0.2em] text-honey">
                 Chantier
               </p>
-              <h2 className="mt-1 font-display text-2xl font-semibold text-walnut">
+              <h2 className="mt-1 font-display text-3xl font-semibold leading-none text-walnut">
                 Faux plafond
               </h2>
-              <p className="mt-1 text-sm leading-5 text-taupe">
+              <p className="mt-2 text-sm font-semibold leading-5 text-walnut">
                 Dalles, ossature et reprise technique.
               </p>
             </div>
@@ -192,10 +192,10 @@ export default function Home() {
                 sizes="(min-width: 1024px) 33vw, 100vw"
                 className="object-cover transition duration-300 group-hover:scale-[1.015]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-walnut/72 via-walnut/12 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-walnut/88 via-walnut/36 to-walnut/4" />
               <div className="absolute bottom-0 p-5 text-white">
                 <h3 className="font-display text-3xl font-semibold">{item.title}</h3>
-                <p className="mt-1 max-w-sm text-sm leading-6 text-white/85">{item.text}</p>
+                <p className="mt-2 max-w-sm text-sm font-semibold leading-6 text-white">{item.text}</p>
               </div>
             </article>
           ))}
