@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { assetPath } from "@/lib/assetPath";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -21,9 +22,9 @@ export const metadata: Metadata = {
   description:
     "iconic-placo accompagne vos projets de placo, cloisons, isolation et finitions interieures.",
   icons: {
-    icon: "/images/logo.jpg",
-    shortcut: "/images/logo.jpg",
-    apple: "/images/logo.jpg",
+    icon: assetPath("/images/logo.jpg"),
+    shortcut: assetPath("/images/logo.jpg"),
+    apple: assetPath("/images/logo.jpg"),
   },
 };
 

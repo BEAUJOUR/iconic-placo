@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { assetPath } from "@/lib/assetPath";
 
 export type ProjectPhoto = {
   index: number;
@@ -59,7 +60,9 @@ const imagesDirectory = path.join(process.cwd(), "public", "images");
 const projectFilePattern = /^project-(\d+)\.(jpe?g|png|webp)$/i;
 
 export function imageExists(src: string) {
-  const fileName = src.replace(/^\/images\//, "");
+  const fileName = src
+    .replace(new RegExp(`^${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}`), "")
+    .replace(/^\/images\//, "");
   return fs.existsSync(path.join(imagesDirectory, fileName));
 }
 
@@ -82,7 +85,7 @@ export function getProjectPhotos(): ProjectPhoto[] {
 
       return {
         index,
-        image: `/images/${fileName}`,
+        image: assetPath(`/images/${fileName}`),
         ...meta,
       };
     })

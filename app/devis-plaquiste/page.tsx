@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { getProjectPhotos } from "@/lib/projectPhotos";
 
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = {
   title: "Devis plaquiste gratuit | ICONIC PLACO",
   description:

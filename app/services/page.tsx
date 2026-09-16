@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/lib/content";
+import { assetPath } from "@/lib/assetPath";
 import { getProjectPhotos, imageExists } from "@/lib/projectPhotos";
-
-export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Prestations | ICONIC PLACO",
@@ -96,7 +95,7 @@ export default function ServicesPage() {
             >
               <div className="relative h-[360px] overflow-hidden border border-goldline bg-ivory shadow-soft">
                 <Image
-                  src={item.image}
+                  src={assetPath(item.image)}
                   alt={item.title}
                   fill
                   sizes="(min-width: 1024px) 45vw, 100vw"

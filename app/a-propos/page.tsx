@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { values } from "@/lib/content";
+import { assetPath } from "@/lib/assetPath";
 import { getProjectPhotos, imageExists } from "@/lib/projectPhotos";
-
-export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "A propos | ICONIC PLACO",
@@ -38,7 +37,7 @@ export default function AboutPage() {
           {heroImage ? (
             <div className="relative h-[420px] overflow-hidden rounded-tr-[80px] border border-goldline bg-warm shadow-soft">
               <Image
-                src={heroImage}
+                src={assetPath(heroImage)}
                 alt="Interieur lumineux apres intervention ICONIC PLACO"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"

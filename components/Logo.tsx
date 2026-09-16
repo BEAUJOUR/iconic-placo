@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/assetPath";
 
 type LogoProps = {
   size?: "sm" | "md" | "lg";
@@ -14,7 +15,7 @@ export function Logo({ size = "md" }: LogoProps) {
   return (
     <span className={`relative block shrink-0 overflow-hidden rounded-full ${sizes[size]}`}>
       <Image
-        src="/images/logo.jpg"
+        src={assetPath("/images/logo.jpg")}
         alt="ICONIC PLACO"
         fill
         sizes="96px"

@@ -7,6 +7,7 @@ import {
   trustItems,
   values,
 } from "@/lib/content";
+import { assetPath } from "@/lib/assetPath";
 
 export default function Home() {
   const featuredServices = services.slice(0, 4);
@@ -59,7 +60,7 @@ export default function Home() {
 
           <div className="relative h-[420px] overflow-hidden rounded-tl-[92px] border border-goldline bg-ivory shadow-soft lg:h-[560px]">
             <Image
-              src={siteImages.hero}
+              src={assetPath(siteImages.hero)}
               alt="Faux plafond suspendu realise par ICONIC PLACO"
               fill
               priority
@@ -131,7 +132,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
           <div className="relative h-[430px] overflow-hidden border border-goldline bg-warm shadow-soft">
             <Image
-              src={siteImages.about}
+              src={assetPath(siteImages.about)}
               alt="Cloison et doublage en plaques de platre"
               fill
               sizes="(min-width: 1024px) 52vw, 100vw"
@@ -185,7 +186,7 @@ export default function Home() {
           {realizations.map((item) => (
             <article key={item.title} className="group relative h-[360px] overflow-hidden border border-goldline bg-ivory">
               <Image
-                src={item.image}
+                src={assetPath(item.image)}
                 alt={item.title}
                 fill
                 sizes="(min-width: 1024px) 33vw, 100vw"

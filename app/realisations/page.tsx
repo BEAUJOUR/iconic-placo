@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { realizations } from "@/lib/content";
+import { assetPath } from "@/lib/assetPath";
 import { getProjectPhotos, imageExists } from "@/lib/projectPhotos";
-
-export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Realisations | ICONIC PLACO",
@@ -45,7 +44,7 @@ export default function RealisationsPage() {
               className="group relative min-h-[430px] overflow-hidden border border-cream bg-ivory"
             >
               <Image
-                src={item.image}
+                src={assetPath(item.image)}
                 alt={item.title}
                 fill
                 sizes="(min-width: 1024px) 33vw, 100vw"
