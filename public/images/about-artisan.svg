@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1150" viewBox="0 0 1000 1150" fill="none">
+  <rect width="1000" height="1150" fill="#F1E3C9"/>
+  <rect x="95" y="95" width="810" height="960" rx="16" fill="#FFFDF8"/>
+  <path d="M175 220H825M175 365H825M175 510H825M175 655H825" stroke="#DDC89A" stroke-width="7"/>
+  <rect x="230" y="705" width="540" height="210" rx="12" fill="#C99A3D" opacity=".18"/>
+  <circle cx="500" cy="516" r="250" stroke="#C99A3D" stroke-width="5" opacity=".34"/>
+  <circle cx="500" cy="516" r="180" stroke="#D8AE59" stroke-width="4" opacity=".42"/>
+  <text x="190" y="1005" fill="#817569" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="3">PHOTO ARTISAN A REMPLACER</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" fill="none">
+  <rect width="900" height="650" fill="#FBF6EB"/>
+  <path d="M80 95H820V285H80V95Z" fill="#FFFDF8" stroke="#DDC89A" stroke-width="8"/>
+  <circle cx="245" cy="190" r="28" fill="#D8AE59" opacity=".7"/>
+  <circle cx="450" cy="190" r="28" fill="#D8AE59" opacity=".7"/>
+  <circle cx="655" cy="190" r="28" fill="#D8AE59" opacity=".7"/>
+  <path d="M126 515H774" stroke="#C99A3D" stroke-width="14" stroke-linecap="round" opacity=".35"/>
+  <text x="90" y="595" fill="#817569" font-family="Arial, sans-serif" font-size="28" font-weight="700">Faux plafond lumineux</text>
+</svg>

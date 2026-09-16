@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" fill="none">
+  <rect width="900" height="650" fill="#FFF9EE"/>
+  <path d="M160 100L450 40L740 100V535H160V100Z" fill="#FFFDF8" stroke="#DDC89A" stroke-width="8"/>
+  <path d="M220 168H680M220 245H680M220 322H680M220 399H680" stroke="#EAD7AA" stroke-width="10"/>
+  <path d="M450 40V535" stroke="#C99A3D" stroke-width="6" opacity=".4"/>
+  <text x="90" y="595" fill="#817569" font-family="Arial, sans-serif" font-size="28" font-weight="700">Isolation interieure</text>
+</svg>
