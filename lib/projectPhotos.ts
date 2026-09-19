@@ -59,6 +59,12 @@ const photoMeta: Record<number, Omit<ProjectPhoto, "index" | "image">> = {
 
 const imagesDirectory = path.join(process.cwd(), "public", "images");
 const projectFilePattern = /^project-(\d+)\.(jpe?g|png|webp)$/i;
+const excludedProjectIndexes = new Set([12, 17, 18, 20, 36, 42]);
+const portfolioOverrides: Partial<Record<number, string>> = {
+  24: "portfolio-24.webp",
+  35: "portfolio-35.webp",
+  38: "portfolio-38.webp",
+};
 
 export function imageExists(src: string) {
   const fileName = src
@@ -76,8 +82,10 @@ export function getProjectPhotos(): ProjectPhoto[] {
     .readdirSync(imagesDirectory)
     .map((fileName) => ({ fileName, match: fileName.match(projectFilePattern) }))
     .filter((entry): entry is { fileName: string; match: RegExpMatchArray } => Boolean(entry.match))
+    .filter(({ match }) => !excludedProjectIndexes.has(Number(match[1])))
     .map(({ fileName, match }) => {
       const index = Number(match[1]);
+      const displayFileName = portfolioOverrides[index] ?? fileName;
       const meta = photoMeta[index] ?? {
         title: `Photo chantier ${String(index).padStart(2, "0")}`,
         category: "Photo chantier",
@@ -86,7 +94,7 @@ export function getProjectPhotos(): ProjectPhoto[] {
 
       return {
         index,
-        image: assetPath(`/images/${fileName}`),
+        image: assetPath(`/images/${displayFileName}`),
         ...meta,
       };
     })

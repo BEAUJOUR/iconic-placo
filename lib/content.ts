@@ -76,7 +76,7 @@ export const realizations = [
   {
     title: "Cloisons et doublages",
     text: "Ossatures, plaques et volumes restructures avant finitions.",
-    image: "/images/project-38.jpg",
+    image: "/images/portfolio-38.webp",
   },
   {
     title: "Faux plafond lumineux",
@@ -92,7 +92,7 @@ export const realizations = [
 
 export const siteImages = {
   hero: "/images/project-23.jpg",
-  about: "/images/project-38.jpg",
+  about: "/images/portfolio-38.webp",
 };
 
 export const projectGallery = [
