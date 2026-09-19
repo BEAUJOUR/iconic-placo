@@ -8,6 +8,7 @@ import {
   values,
 } from "@/lib/content";
 import { assetPath } from "@/lib/assetPath";
+import { siteConfig } from "@/lib/siteConfig";
 
 export default function Home() {
   const featuredServices = services.slice(0, 4);
@@ -28,7 +29,7 @@ export default function Home() {
             </h1>
             <div className="mt-5 h-px w-20 bg-champagne" />
             <p className="mt-5 max-w-xl text-[1.02rem] leading-7 text-taupe">
-              Iconic P Solution realise cloisons, faux plafonds, isolation, bandes
+              {siteConfig.name} realise cloisons, faux plafonds, isolation, bandes
               et reprises interieures avec une attention precise aux details.
             </p>
 
@@ -61,7 +62,7 @@ export default function Home() {
           <div className="relative h-[420px] overflow-hidden rounded-tl-[92px] border border-goldline bg-ivory shadow-soft lg:h-[560px]">
             <Image
               src={assetPath(siteImages.hero)}
-              alt="Faux plafond suspendu realise par Iconic P Solution"
+              alt={`Faux plafond suspendu realise par ${siteConfig.name}`}
               fill
               priority
               sizes="(min-width: 1024px) 55vw, 100vw"
@@ -89,7 +90,7 @@ export default function Home() {
             Un artisan. Un interlocuteur. Une finition lisible.
           </p>
           <p className="text-xs font-bold uppercase tracking-[0.38em] text-champagne">
-            ICONIC P SOLUTION
+            {siteConfig.nameUppercase}
           </p>
         </div>
       </section>
@@ -213,7 +214,7 @@ export default function Home() {
             </h2>
             <p className="mt-3 max-w-xl leading-7 text-taupe">
               Envoyez les photos, les dimensions approximatives et la ville :
-              Iconic P Solution vous recontacte pour organiser la suite.
+              {siteConfig.name} vous recontacte pour organiser la suite.
             </p>
           </div>
           <Link href="/devis" className="bg-walnut px-6 py-3.5 text-center text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-honey">

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Demande de devis | Iconic P Solution",
-  description:
-    "Preparez votre demande de devis Iconic P Solution avec les informations utiles pour cadrer le chantier.",
+  title: `Demande de devis | ${siteConfig.name}`,
+  description: `Preparez votre demande de devis ${siteConfig.name} avec les informations utiles pour cadrer le chantier.`,
 };
 
 const quoteSteps = [
@@ -87,8 +87,8 @@ export default function DevisPage() {
           </button>
           <p className="mt-5 text-sm leading-6 text-taupe">
             Vous pouvez aussi envoyer directement vos photos par e-mail :
-            <Link href="mailto:iconicplaco77@hotmail.com" className="ml-1 font-bold text-champagne">
-              iconicplaco77@hotmail.com
+            <Link href={`mailto:${siteConfig.email}`} className="ml-1 font-bold text-champagne">
+              {siteConfig.email}
             </Link>
           </p>
         </form>

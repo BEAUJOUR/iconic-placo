@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Logo } from "@/components/Logo";
+import { siteConfig } from "@/lib/siteConfig";
 
 const navItems = [
   { href: "/", label: "Accueil" },
@@ -21,7 +22,7 @@ export function Header() {
           <Link href="/" className="flex shrink-0 flex-col items-center gap-1" onClick={() => setIsOpen(false)}>
             <Logo size="sm" />
             <span className="whitespace-nowrap text-[10px] font-bold uppercase text-clay">
-              Iconic P Solution
+              {siteConfig.name}
             </span>
           </Link>
 
@@ -40,10 +41,10 @@ export function Header() {
 
           <div className="hidden items-center gap-3 md:flex">
             <a
-              href="tel:+33609505563"
+              href={siteConfig.phoneHref}
               className="border border-goldline bg-warm px-4 py-2.5 text-sm font-bold text-walnut transition duration-200 hover:border-champagne hover:text-champagne"
             >
-              06 09 50 55 63
+              {siteConfig.phoneDisplay}
             </a>
             <Link
               href="/devis-plaquiste"

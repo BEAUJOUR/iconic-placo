@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Contact | Iconic P Solution",
-  description:
-    "Contactez Iconic P Solution pour un devis platrerie, isolation ou finitions interieures.",
+  title: `Contact | ${siteConfig.name}`,
+  description: `Contactez ${siteConfig.name} pour un devis platrerie, isolation ou finitions interieures.`,
 };
 
 export default function ContactPage() {
@@ -36,8 +36,8 @@ export default function ContactPage() {
             <a href="tel:+33609505563" className="border border-goldline bg-cream px-5 py-4 font-bold text-walnut transition hover:text-champagne">
               06 09 50 55 63
             </a>
-            <a href="mailto:iconicplaco77@hotmail.com" className="border border-goldline bg-cream px-5 py-4 font-bold text-walnut transition hover:text-champagne">
-              iconicplaco77@hotmail.com
+            <a href={`mailto:${siteConfig.email}`} className="border border-goldline bg-cream px-5 py-4 font-bold text-walnut transition hover:text-champagne">
+              {siteConfig.email}
             </a>
           </div>
           <div className="mt-7 border-t border-goldline pt-5">

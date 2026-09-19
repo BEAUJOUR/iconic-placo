@@ -4,9 +4,10 @@ import Link from "next/link";
 import { services } from "@/lib/content";
 import { assetPath } from "@/lib/assetPath";
 import { getProjectPhotos, imageExists } from "@/lib/projectPhotos";
+import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Prestations | Iconic P Solution",
+  title: `Prestations | ${siteConfig.name}`,
   description:
     "Prestations de platrerie, cloisons, faux plafonds, isolation interieure, bandes, enduits et peinture.",
 };
@@ -60,7 +61,7 @@ export default function ServicesPage() {
             </h1>
           </div>
           <p className="max-w-2xl leading-7 text-taupe">
-            Iconic P Solution intervient sur les ouvrages qui transforment un
+            {siteConfig.name} intervient sur les ouvrages qui transforment un
             interieur : structures, plafonds, isolation, reprises et finitions.
             Chaque prestation est abordee selon le support et le rendu attendu.
           </p>

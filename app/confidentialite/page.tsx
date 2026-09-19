@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
+import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Confidentialite | Iconic P Solution",
+  title: `Confidentialite | ${siteConfig.name}`,
 };
 
 export default function PrivacyPage() {

@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getProjectPhotos } from "@/lib/projectPhotos";
+import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Devis plaquiste gratuit | Iconic P Solution",
+  title: `Devis plaquiste gratuit | ${siteConfig.name}`,
   description:
     "Demandez un devis gratuit pour vos travaux de placo, cloisons, faux plafonds, isolation, bandes et finitions interieures.",
 };
@@ -88,7 +89,7 @@ export default function DevisPlaquistePage() {
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/84">
               Cloisons, doublages, faux plafonds, isolation, bandes et
-              finitions : Iconic P Solution vous aide a transformer un interieur avec
+              finitions : {siteConfig.name} vous aide a transformer un interieur avec
               une execution propre et lisible.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -129,7 +130,7 @@ export default function DevisPlaquistePage() {
               les dimensions, la ville et les photos si possible.
             </p>
             <form
-              action="mailto:iconicplaco77@hotmail.com"
+              action={`mailto:${siteConfig.email}`}
               method="post"
               encType="text/plain"
               className="mt-6 grid gap-4"
@@ -347,7 +348,7 @@ export default function DevisPlaquistePage() {
               Remplir le formulaire
             </a>
             <a
-              href="mailto:iconicplaco77@hotmail.com"
+              href={`mailto:${siteConfig.email}`}
               className="border border-white/25 px-6 py-4 text-center text-sm font-black uppercase tracking-[0.08em] text-white transition hover:bg-white hover:text-walnut"
             >
               Envoyer un email

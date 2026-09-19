@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { assetPath } from "@/lib/assetPath";
+import { siteConfig } from "@/lib/siteConfig";
 
 export type ProjectPhoto = {
   index: number;
@@ -80,7 +81,7 @@ export function getProjectPhotos(): ProjectPhoto[] {
       const meta = photoMeta[index] ?? {
         title: `Photo chantier ${String(index).padStart(2, "0")}`,
         category: "Photo chantier",
-        description: "Image ajoutee au dossier projets Iconic P Solution.",
+        description: `Image ajoutee au dossier projets ${siteConfig.name}.`,
       };
 
       return {

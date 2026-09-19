@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { methodSteps } from "@/lib/content";
+import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Methode | Iconic P Solution",
-  description:
-    "La methode Iconic P Solution, du premier echange a la reception du chantier.",
+  title: `Methode | ${siteConfig.name}`,
+  description: `La methode ${siteConfig.name}, du premier echange a la reception du chantier.`,
 };
 
 export default function MethodePage() {

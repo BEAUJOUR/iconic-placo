@@ -3,13 +3,15 @@ import path from "node:path";
 
 const projectRoot = path.resolve(".");
 const isGithubPages = process.env.GITHUB_PAGES === "true";
+// This must match the existing GitHub repository name until that repository is renamed.
+const githubPagesBasePath = "/iconic-placo";
 
 const nextConfig: NextConfig = {
   ...(isGithubPages
     ? {
         output: "export" as const,
-        basePath: "/iconic-placo",
-        assetPrefix: "/iconic-placo/",
+        basePath: githubPagesBasePath,
+        assetPrefix: `${githubPagesBasePath}/`,
         trailingSlash: true,
       }
     : {}),
@@ -17,7 +19,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   env: {
-    NEXT_PUBLIC_BASE_PATH: isGithubPages ? "/iconic-placo" : "",
+    NEXT_PUBLIC_BASE_PATH: isGithubPages ? githubPagesBasePath : "",
   },
   outputFileTracingRoot: projectRoot,
   turbopack: {

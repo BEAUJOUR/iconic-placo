@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
+import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Mentions legales | Iconic P Solution",
+  title: `Mentions legales | ${siteConfig.name}`,
 };
 
 export default function LegalPage() {

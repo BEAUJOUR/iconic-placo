@@ -3,11 +3,11 @@ import Image from "next/image";
 import { realizations } from "@/lib/content";
 import { assetPath } from "@/lib/assetPath";
 import { getProjectPhotos, imageExists } from "@/lib/projectPhotos";
+import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Realisations | Iconic P Solution",
-  description:
-    "Toutes les photos de chantiers Iconic P Solution : cloisons, doublages, faux plafonds, isolation, bandes et finitions.",
+  title: `Realisations | ${siteConfig.name}`,
+  description: `Toutes les photos de chantiers ${siteConfig.name} : cloisons, doublages, faux plafonds, isolation, bandes et finitions.`,
 };
 
 export default function RealisationsPage() {

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
+import { siteConfig } from "@/lib/siteConfig";
 
 export function Footer() {
   return (
@@ -9,7 +10,7 @@ export function Footer() {
           <div className="inline-flex flex-col items-center gap-2">
             <Logo size="lg" />
             <p className="text-xs font-bold uppercase text-walnut">
-              Iconic P Solution
+              {siteConfig.name}
             </p>
           </div>
           <p className="mt-4 max-w-xs leading-6">
@@ -49,8 +50,8 @@ export function Footer() {
         </div>
       </div>
       <div className="mx-auto mt-8 flex max-w-7xl flex-col gap-2 border-t border-goldline pt-5 text-xs text-taupe md:flex-row md:items-center md:justify-between">
-        <p>&copy; 2026 Iconic P Solution. Tous droits reserves.</p>
-        <p>06 09 50 55 63 - iconicplaco77@hotmail.com</p>
+        <p>&copy; 2026 {siteConfig.name}. Tous droits reserves.</p>
+        <p>{siteConfig.phoneDisplay} - {siteConfig.email}</p>
       </div>
     </footer>
   );
