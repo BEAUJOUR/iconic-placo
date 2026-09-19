@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact | ICONIC PLACO",
+  title: "Contact | Iconic P Solution",
   description:
-    "Contactez ICONIC PLACO pour un devis platrerie, isolation ou finitions interieures.",
+    "Contactez Iconic P Solution pour un devis platrerie, isolation ou finitions interieures.",
 };
 
 export default function ContactPage() {

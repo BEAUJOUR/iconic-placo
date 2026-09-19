@@ -6,7 +6,7 @@ import { assetPath } from "@/lib/assetPath";
 import { getProjectPhotos, imageExists } from "@/lib/projectPhotos";
 
 export const metadata: Metadata = {
-  title: "Prestations | ICONIC PLACO",
+  title: "Prestations | Iconic P Solution",
   description:
     "Prestations de platrerie, cloisons, faux plafonds, isolation interieure, bandes, enduits et peinture.",
 };
@@ -60,7 +60,7 @@ export default function ServicesPage() {
             </h1>
           </div>
           <p className="max-w-2xl leading-7 text-taupe">
-            ICONIC PLACO intervient sur les ouvrages qui transforment un
+            Iconic P Solution intervient sur les ouvrages qui transforment un
             interieur : structures, plafonds, isolation, reprises et finitions.
             Chaque prestation est abordee selon le support et le rendu attendu.
           </p>

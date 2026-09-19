@@ -6,9 +6,9 @@ import { assetPath } from "@/lib/assetPath";
 import { getProjectPhotos, imageExists } from "@/lib/projectPhotos";
 
 export const metadata: Metadata = {
-  title: "A propos | ICONIC PLACO",
+  title: "A propos | Iconic P Solution",
   description:
-    "L'esprit ICONIC PLACO : ecoute, precision et respect des lieux pour vos chantiers interieurs.",
+    "L'esprit Iconic P Solution : ecoute, precision et respect des lieux pour vos chantiers interieurs.",
 };
 
 export default function AboutPage() {
@@ -23,7 +23,7 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:px-8 lg:py-14">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.26em] text-champagne">
-              L&apos;esprit ICONIC PLACO
+              L&apos;esprit Iconic P Solution
             </p>
             <h1 className="mt-4 max-w-2xl text-balance font-display text-[clamp(2.8rem,5vw,4rem)] font-semibold leading-[0.98] tracking-[-0.03em]">
               Le detail avant tout.
@@ -38,7 +38,7 @@ export default function AboutPage() {
             <div className="relative h-[420px] overflow-hidden rounded-tr-[80px] border border-goldline bg-warm shadow-soft">
               <Image
                 src={assetPath(heroImage)}
-                alt="Interieur lumineux apres intervention ICONIC PLACO"
+                alt="Interieur lumineux apres intervention Iconic P Solution"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Mentions legales | ICONIC PLACO",
+  title: "Mentions legales | Iconic P Solution",
 };
 
 export default function LegalPage() {

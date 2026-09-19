@@ -5,9 +5,9 @@ import { assetPath } from "@/lib/assetPath";
 import { getProjectPhotos, imageExists } from "@/lib/projectPhotos";
 
 export const metadata: Metadata = {
-  title: "Realisations | ICONIC PLACO",
+  title: "Realisations | Iconic P Solution",
   description:
-    "Toutes les photos de chantiers ICONIC PLACO : cloisons, doublages, faux plafonds, isolation, bandes et finitions.",
+    "Toutes les photos de chantiers Iconic P Solution : cloisons, doublages, faux plafonds, isolation, bandes et finitions.",
 };
 
 export default function RealisationsPage() {

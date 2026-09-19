@@ -44,7 +44,7 @@ export function Footer() {
         </div>
       </div>
       <div className="mx-auto mt-8 flex max-w-7xl flex-col gap-2 border-t border-goldline pt-5 text-xs text-taupe md:flex-row md:items-center md:justify-between">
-        <p>&copy; 2026 ICONIC PLACO. Tous droits reserves.</p>
+        <p>&copy; 2026 Iconic P Solution. Tous droits reserves.</p>
         <p>06 09 50 55 63 - iconicplaco77@hotmail.com</p>
       </div>
     </footer>

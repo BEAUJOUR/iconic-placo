@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getProjectPhotos } from "@/lib/projectPhotos";
 
 export const metadata: Metadata = {
-  title: "Devis plaquiste gratuit | ICONIC PLACO",
+  title: "Devis plaquiste gratuit | Iconic P Solution",
   description:
     "Demandez un devis gratuit pour vos travaux de placo, cloisons, faux plafonds, isolation, bandes et finitions interieures.",
 };
@@ -88,7 +88,7 @@ export default function DevisPlaquistePage() {
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/84">
               Cloisons, doublages, faux plafonds, isolation, bandes et
-              finitions : ICONIC PLACO vous aide a transformer un interieur avec
+              finitions : Iconic P Solution vous aide a transformer un interieur avec
               une execution propre et lisible.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">

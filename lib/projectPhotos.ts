@@ -80,7 +80,7 @@ export function getProjectPhotos(): ProjectPhoto[] {
       const meta = photoMeta[index] ?? {
         title: `Photo chantier ${String(index).padStart(2, "0")}`,
         category: "Photo chantier",
-        description: "Image ajoutee au dossier projets ICONIC PLACO.",
+        description: "Image ajoutee au dossier projets Iconic P Solution.",
       };
 
       return {

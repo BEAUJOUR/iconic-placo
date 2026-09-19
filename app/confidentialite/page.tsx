@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Confidentialite | ICONIC PLACO",
+  title: "Confidentialite | Iconic P Solution",
 };
 
 export default function PrivacyPage() {

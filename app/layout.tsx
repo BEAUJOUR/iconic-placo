@@ -18,9 +18,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "iconic-placo | Artisan plaquiste",
+  title: "Iconic P Solution | Artisan plaquiste",
   description:
-    "iconic-placo accompagne vos projets de placo, cloisons, isolation et finitions interieures.",
+    "Iconic P Solution accompagne vos projets de placo, cloisons, isolation et finitions interieures.",
   icons: {
     icon: assetPath("/images/logo.jpg"),
     shortcut: assetPath("/images/logo.jpg"),

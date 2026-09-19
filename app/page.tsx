@@ -28,7 +28,7 @@ export default function Home() {
             </h1>
             <div className="mt-5 h-px w-20 bg-champagne" />
             <p className="mt-5 max-w-xl text-[1.02rem] leading-7 text-taupe">
-              ICONIC PLACO realise cloisons, faux plafonds, isolation, bandes
+              Iconic P Solution realise cloisons, faux plafonds, isolation, bandes
               et reprises interieures avec une attention precise aux details.
             </p>
 
@@ -61,7 +61,7 @@ export default function Home() {
           <div className="relative h-[420px] overflow-hidden rounded-tl-[92px] border border-goldline bg-ivory shadow-soft lg:h-[560px]">
             <Image
               src={assetPath(siteImages.hero)}
-              alt="Faux plafond suspendu realise par ICONIC PLACO"
+              alt="Faux plafond suspendu realise par Iconic P Solution"
               fill
               priority
               sizes="(min-width: 1024px) 55vw, 100vw"
@@ -89,7 +89,7 @@ export default function Home() {
             Un artisan. Un interlocuteur. Une finition lisible.
           </p>
           <p className="text-xs font-bold uppercase tracking-[0.38em] text-champagne">
-            ICONIC PLACO
+            ICONIC P SOLUTION
           </p>
         </div>
       </section>
@@ -213,7 +213,7 @@ export default function Home() {
             </h2>
             <p className="mt-3 max-w-xl leading-7 text-taupe">
               Envoyez les photos, les dimensions approximatives et la ville :
-              ICONIC PLACO vous recontacte pour organiser la suite.
+              Iconic P Solution vous recontacte pour organiser la suite.
             </p>
           </div>
           <Link href="/devis" className="bg-walnut px-6 py-3.5 text-center text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-honey">

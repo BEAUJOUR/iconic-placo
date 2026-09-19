@@ -21,7 +21,8 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
             <Logo size="md" />
             <span className="hidden text-xs font-bold uppercase tracking-[0.22em] text-clay sm:block">
-             Iconic-Placo</span>
+              Iconic P Solution
+            </span>
           </Link>
 
           <div className="hidden items-center gap-9 text-sm font-semibold text-walnut lg:flex">

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Demande de devis | ICONIC PLACO",
+  title: "Demande de devis | Iconic P Solution",
   description:
-    "Preparez votre demande de devis ICONIC PLACO avec les informations utiles pour cadrer le chantier.",
+    "Preparez votre demande de devis Iconic P Solution avec les informations utiles pour cadrer le chantier.",
 };
 
 const quoteSteps = [

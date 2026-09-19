@@ -18,7 +18,7 @@ export function Logo({ size = "md" }: LogoProps) {
     >
       <Image
         src={assetPath("/images/logo.jpg")}
-        alt="ICONIC PLACO"
+        alt="Iconic P Solution"
         fill
         sizes="96px"
         className="scale-[1.42] object-cover"

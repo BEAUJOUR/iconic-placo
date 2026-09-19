@@ -3,9 +3,9 @@ import Link from "next/link";
 import { methodSteps } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Methode | ICONIC PLACO",
+  title: "Methode | Iconic P Solution",
   description:
-    "La methode ICONIC PLACO, du premier echange a la reception du chantier.",
+    "La methode Iconic P Solution, du premier echange a la reception du chantier.",
 };
 
 export default function MethodePage() {
