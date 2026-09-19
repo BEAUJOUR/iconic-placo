@@ -68,6 +68,7 @@ const excludedProjectIndexes = new Set([
   18,
   20,
   21,
+  25,
   28,
   29,
   30,
@@ -77,8 +78,9 @@ const excludedProjectIndexes = new Set([
   42,
 ]);
 const portfolioOverrides: Partial<Record<number, string>> = {
+  11: "portfolio-11.webp",
   24: "portfolio-24.webp",
-  25: "portfolio-25.webp",
+  26: "portfolio-26.webp",
   35: "portfolio-35.webp",
   38: "portfolio-38.webp",
   39: "portfolio-39.webp",
