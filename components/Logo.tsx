@@ -21,7 +21,7 @@ export function Logo({ size = "md" }: LogoProps) {
         alt="Iconic P Solution"
         fill
         sizes="96px"
-        className="object-cover"
+        className="scale-[1.42] object-cover"
         priority={size !== "lg"}
       />
     </span>
