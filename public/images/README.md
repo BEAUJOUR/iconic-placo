@@ -2,7 +2,7 @@ Placez ici les images du site.
 
 Noms conseilles :
 
-- iconic-p-solution-logo.jpg
+- iconic-p-solution-logo.png
 - hero-renovation.jpg
 - about-renovation.jpg
 - realisation-finitions.jpg

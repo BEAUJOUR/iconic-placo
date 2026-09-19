@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   description:
     "Iconic P Solution accompagne vos projets de placo, cloisons, isolation et finitions interieures.",
   icons: {
-    icon: assetPath("/images/iconic-p-solution-logo.jpg"),
-    shortcut: assetPath("/images/iconic-p-solution-logo.jpg"),
-    apple: assetPath("/images/iconic-p-solution-logo.jpg"),
+    icon: assetPath("/images/iconic-p-solution-logo.png"),
+    shortcut: assetPath("/images/iconic-p-solution-logo.png"),
+    apple: assetPath("/images/iconic-p-solution-logo.png"),
   },
 };
 

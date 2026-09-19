@@ -14,10 +14,10 @@ const sizes = {
 export function Logo({ size = "md" }: LogoProps) {
   return (
     <span
-      className={`relative block shrink-0 overflow-hidden rounded-full border border-walnut/10 bg-[#2f2f2f] ${sizes[size]}`}
+      className={`relative block shrink-0 overflow-hidden rounded-full bg-black ${sizes[size]}`}
     >
       <Image
-        src={assetPath("/images/iconic-p-solution-logo.jpg")}
+        src={assetPath("/images/iconic-p-solution-logo.png")}
         alt="Iconic P Solution"
         fill
         sizes="96px"
