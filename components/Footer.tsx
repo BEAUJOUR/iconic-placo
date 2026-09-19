@@ -6,7 +6,12 @@ export function Footer() {
     <footer className="border-t border-goldline bg-cream px-5 py-10 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-8 text-sm text-taupe md:grid-cols-[1.2fr_0.8fr_0.8fr]">
         <div>
-          <Logo size="lg" />
+          <div className="inline-flex flex-col items-center gap-2">
+            <Logo size="lg" />
+            <p className="text-xs font-bold uppercase text-walnut">
+              Iconic P Solution
+            </p>
+          </div>
           <p className="mt-4 max-w-xs leading-6">
             Platrerie, isolation et finitions interieures avec le sens du
             detail artisanal.

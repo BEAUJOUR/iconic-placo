@@ -6,22 +6,22 @@ type LogoProps = {
 };
 
 const sizes = {
-  sm: "h-14 w-14",
-  md: "h-[72px] w-[72px]",
-  lg: "h-24 w-24",
+  sm: "h-16 w-16",
+  md: "h-20 w-20",
+  lg: "h-28 w-28",
 };
 
 export function Logo({ size = "md" }: LogoProps) {
   return (
     <span
-      className={`relative block shrink-0 overflow-hidden rounded-full bg-black ${sizes[size]}`}
+      className={`relative block shrink-0 overflow-hidden bg-black p-1 ${sizes[size]}`}
     >
       <Image
-        src={assetPath("/images/iconic-p-solution-logo.png")}
+        src={assetPath("/images/iconic-p-solution-logo-transparent.png")}
         alt="Iconic P Solution"
         fill
         sizes="96px"
-        className="scale-[1.42] object-cover"
+        className="object-contain p-1"
         priority={size !== "lg"}
       />
     </span>

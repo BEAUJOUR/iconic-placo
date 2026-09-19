@@ -17,10 +17,10 @@ export function Header() {
   return (
     <header className="sticky top-0 z-30 border-b border-goldline bg-cream/95 backdrop-blur">
       <nav className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="flex min-h-[76px] items-center justify-between gap-4 lg:min-h-[88px]">
-          <Link href="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
-            <Logo size="md" />
-            <span className="hidden text-xs font-bold uppercase tracking-[0.22em] text-clay sm:block">
+        <div className="flex min-h-[96px] items-center justify-between gap-4 lg:min-h-[108px]">
+          <Link href="/" className="flex shrink-0 flex-col items-center gap-1" onClick={() => setIsOpen(false)}>
+            <Logo size="sm" />
+            <span className="whitespace-nowrap text-[10px] font-bold uppercase text-clay">
               Iconic P Solution
             </span>
           </Link>
