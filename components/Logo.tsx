@@ -14,7 +14,7 @@ const sizes = {
 export function Logo({ size = "md" }: LogoProps) {
   return (
     <span
-      className={`relative block shrink-0 overflow-hidden bg-black p-1 ${sizes[size]}`}
+      className={`relative block shrink-0 overflow-hidden rounded-full bg-black p-1 ${sizes[size]}`}
     >
       <Image
         src={assetPath("/images/iconic-p-solution-logo-transparent.png")}
