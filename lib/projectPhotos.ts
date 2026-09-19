@@ -59,11 +59,29 @@ const photoMeta: Record<number, Omit<ProjectPhoto, "index" | "image">> = {
 
 const imagesDirectory = path.join(process.cwd(), "public", "images");
 const projectFilePattern = /^project-(\d+)\.(jpe?g|png|webp)$/i;
-const excludedProjectIndexes = new Set([12, 17, 18, 20, 36, 42]);
+// Keep the public gallery focused on distinct, readable and presentation-ready views.
+const excludedProjectIndexes = new Set([
+  8,
+  12,
+  13,
+  17,
+  18,
+  20,
+  21,
+  28,
+  29,
+  30,
+  32,
+  33,
+  36,
+  42,
+]);
 const portfolioOverrides: Partial<Record<number, string>> = {
   24: "portfolio-24.webp",
+  25: "portfolio-25.webp",
   35: "portfolio-35.webp",
   38: "portfolio-38.webp",
+  39: "portfolio-39.webp",
 };
 
 export function imageExists(src: string) {

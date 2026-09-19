@@ -67,15 +67,15 @@ export default function RealisationsPage() {
       <section className="border-y border-goldline bg-warm">
         <div className="mx-auto max-w-7xl px-5 py-12 lg:px-8">
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-champagne">
-            Galerie complete
+            Galerie selectionnee
           </p>
           <h2 className="mt-4 max-w-3xl text-balance font-display text-[clamp(2.2rem,4vw,3rem)] font-semibold leading-tight tracking-[-0.02em] text-walnut">
-            Toutes les photos du chantier, sans masquer les etapes.
+            Une selection claire des chantiers et des etapes de pose.
           </h2>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-taupe">
-            Certaines images montrent le travail fini, d&apos;autres les phases
-            techniques : ossature, isolation, plafond suspendu, reprises et
-            preparation des supports.
+            Chaque vue a ete retenue pour montrer un ouvrage distinct : travail
+            fini, ossature, isolation, plafond suspendu, reprises ou preparation
+            des supports.
           </p>
         </div>
       </section>
