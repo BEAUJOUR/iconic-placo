@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { values } from "@/lib/content";
 import { assetPath } from "@/lib/assetPath";
-import { getProjectPhotos, imageExists } from "@/lib/projectPhotos";
+import { getProjectImage, getProjectPhotos } from "@/lib/projectPhotos";
 import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
@@ -12,9 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const heroImage = imageExists("/images/project-19.jpg")
-    ? "/images/project-19.jpg"
-    : getProjectPhotos()[0]?.image;
+  const heroImage = getProjectImage(19) ?? getProjectPhotos()[0]?.image;
   const terrainPhotos = getProjectPhotos().slice(4, 8);
 
   return (

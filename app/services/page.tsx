@@ -3,7 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/lib/content";
 import { assetPath } from "@/lib/assetPath";
-import { getProjectPhotos, imageExists } from "@/lib/projectPhotos";
+import {
+  getProjectImage,
+  getProjectPhotos,
+  imageExists,
+} from "@/lib/projectPhotos";
 import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
@@ -14,21 +18,21 @@ export const metadata: Metadata = {
 
 const serviceDetails = [
   {
-    image: "/images/project-38.jpg",
+    image: getProjectImage(38) ?? "",
     kicker: "Volumes",
     title: "Cloisons, doublages et isolation",
     text: "La structure est pensee selon le support, la piece et l'usage attendu : separation, confort thermique, acoustique ou reprise d'un mur existant.",
     points: ["Ossature metallique", "Plaques de platre", "Isolation interieure", "Habillage mural"],
   },
   {
-    image: "/images/project-23.jpg",
+    image: getProjectImage(23) ?? "",
     kicker: "Plafonds",
     title: "Faux plafonds et passages techniques",
     text: "Les plafonds suspendus permettent de corriger, masquer, integrer ou structurer un espace sans perdre la lecture generale de la piece.",
     points: ["Dalles de plafond", "Trappes et reprises", "Passage reseaux", "Eclairage integre"],
   },
   {
-    image: "/images/project-11.jpg",
+    image: getProjectImage(11) ?? "",
     kicker: "Finitions",
     title: "Bandes, enduits et peinture interieure",
     text: "La finition donne son niveau au chantier : raccords, angles, reprises et preparation des surfaces avant peinture ou decoration.",

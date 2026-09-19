@@ -77,16 +77,22 @@ const excludedProjectIndexes = new Set([
   36,
   42,
 ]);
-const portfolioOverrides: Partial<Record<number, string>> = {
-  11: "portfolio-11.webp",
-  24: "portfolio-24.webp",
-  26: "portfolio-26.webp",
-  35: "portfolio-35.webp",
-  38: "portfolio-38.webp",
-  39: "portfolio-39.webp",
-};
+const projectImageExtensions = ["webp", "jpg", "jpeg", "png"] as const;
+
+export function getProjectImage(index: number) {
+  const baseName = `project-${String(index).padStart(2, "0")}`;
+  const fileName = projectImageExtensions
+    .map((extension) => `${baseName}.${extension}`)
+    .find((candidate) => fs.existsSync(path.join(imagesDirectory, candidate)));
+
+  return fileName ? `/images/${fileName}` : undefined;
+}
 
 export function imageExists(src: string) {
+  if (!src) {
+    return false;
+  }
+
   const fileName = src
     .replace(new RegExp(`^${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}`), "")
     .replace(/^\/images\//, "");
@@ -98,14 +104,15 @@ export function getProjectPhotos(): ProjectPhoto[] {
     return [];
   }
 
-  return fs
+  const projectIndexes = fs
     .readdirSync(imagesDirectory)
-    .map((fileName) => ({ fileName, match: fileName.match(projectFilePattern) }))
-    .filter((entry): entry is { fileName: string; match: RegExpMatchArray } => Boolean(entry.match))
-    .filter(({ match }) => !excludedProjectIndexes.has(Number(match[1])))
-    .map(({ fileName, match }) => {
-      const index = Number(match[1]);
-      const displayFileName = portfolioOverrides[index] ?? fileName;
+    .map((fileName) => fileName.match(projectFilePattern))
+    .filter((match): match is RegExpMatchArray => Boolean(match))
+    .map((match) => Number(match[1]));
+
+  return [...new Set(projectIndexes)]
+    .filter((index) => !excludedProjectIndexes.has(index))
+    .map((index) => {
       const meta = photoMeta[index] ?? {
         title: `Photo chantier ${String(index).padStart(2, "0")}`,
         category: "Photo chantier",
@@ -114,7 +121,7 @@ export function getProjectPhotos(): ProjectPhoto[] {
 
       return {
         index,
-        image: assetPath(`/images/${displayFileName}`),
+        image: assetPath(getProjectImage(index) ?? ""),
         ...meta,
       };
     })

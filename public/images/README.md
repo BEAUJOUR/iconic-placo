@@ -1,20 +1,12 @@
-Placez ici les images du site.
+Les photos de chantier utilisent une source unique dans ce dossier :
 
-Noms conseilles :
+- `project-01.jpg`
+- `project-11.webp`
+- `project-42.png`
 
-- iconic-p-solutions-logo-transparent.png
-- hero-renovation.jpg
-- about-renovation.jpg
-- realisation-finitions.jpg
-- realisation-faux-plafond.jpg
-- realisation-interieur.jpg
+Le numero identifie le chantier. Une seule extension doit exister pour un meme
+numero. Toutes les pages recuperent l'image avec `getProjectImage(numero)` :
+remplacer le fichier canonique met donc la photo a jour partout.
 
-Quand les fichiers sont ajoutes, ils peuvent etre utilises dans Next.js avec un chemin comme `/images/hero-renovation.jpg`.
-
-Images actuellement branchees dans le site :
-
-- `hero-renovation.jpg` : hero
-- `about-renovation.jpg` : section a propos
-- `realisation-finitions.jpg` : realisation cloisons / finitions
-- `realisation-faux-plafond.jpg` : realisation faux plafond
-- `realisation-interieur.jpg` : realisation interieure
+Les fichiers `IMG_*`, `hero-*`, `portfolio-*` et `realisation-*` ne doivent pas
+etre crees comme copies d'une photo `project-*`.
