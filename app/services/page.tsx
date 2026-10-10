@@ -61,7 +61,7 @@ export default function ServicesPage() {
               Prestations
             </p>
             <h1 className="mt-4 max-w-2xl text-balance font-display text-[clamp(2.8rem,5vw,4rem)] font-semibold leading-[0.98] tracking-[-0.03em]">
-              Les metiers du placo.
+              Notre savoir-faire.
             </h1>
           </div>
           <p className="max-w-2xl leading-7 text-taupe">
