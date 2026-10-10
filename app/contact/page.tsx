@@ -1,83 +1,51 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
+import { assetPath } from "@/lib/assetPath";
+import { getProjectImage } from "@/lib/projectPhotos";
 import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: `Contact | ${siteConfig.name}`,
-  description: `Contactez ${siteConfig.name} pour un devis platrerie, isolation ou finitions interieures.`,
+  description: `Contactez ${siteConfig.name} pour vos travaux de cloisons, isolation, plafonds et finitions interieures en Ile-de-France.`,
 };
 
 export default function ContactPage() {
+  const image = getProjectImage(11);
+
   return (
     <main className="text-walnut">
-      <section className="bg-sand/50">
-        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end lg:px-8 lg:py-14">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.26em] text-clay">
-              Contact
-            </p>
-            <h1 className="mt-4 max-w-xl text-balance font-display text-[clamp(2.8rem,5vw,4rem)] font-semibold leading-[0.98] tracking-[-0.03em]">
-              Parlons chantier.
-            </h1>
-          </div>
-          <p className="max-w-2xl leading-7 text-taupe">
-            Decrivez les travaux, la ville, l&apos;etat actuel du support et le
-            delai souhaite. Vous pouvez aussi appeler directement pour un
-            premier echange.
+      <section className="border-b border-goldline bg-sand/50">
+        <div className="mx-auto max-w-7xl px-5 py-10 lg:px-8 lg:py-14">
+          <p className="text-xs font-bold uppercase tracking-[0.26em] text-clay">Contact</p>
+          <h1 className="mt-4 max-w-xl font-display text-5xl font-semibold leading-tight sm:text-6xl">Parlons de votre projet.</h1>
+          <p className="mt-5 max-w-2xl leading-7 text-taupe">
+            Cloisons, isolation, plafonds ou finitions : decrivez vos travaux pour
+            preparer un premier echange et une demande de devis gratuit.
           </p>
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-5 py-16 lg:grid-cols-[0.72fr_1.28fr] lg:px-8">
-        <aside className="h-fit border border-goldline bg-warm p-6 shadow-soft">
-          <h2 className="font-display text-3xl font-semibold text-walnut">
-            Coordonnees directes
-          </h2>
-          <div className="mt-6 grid gap-3">
-            <a href="tel:+33609505563" className="border border-goldline bg-cream px-5 py-4 font-bold text-walnut transition hover:text-champagne">
-              06 09 50 55 63
+      <section className="mx-auto grid max-w-7xl gap-10 px-5 py-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16 lg:px-8 lg:py-16">
+        <aside className="min-w-0">
+          <h2 className="font-display text-3xl font-semibold">Contact direct</h2>
+          <div className="mt-5 divide-y divide-goldline border-y border-goldline">
+            <a href={siteConfig.phoneHref} className="block py-5 transition hover:text-champagne">
+              <span className="block text-sm text-taupe">Telephone</span>
+              <span className="mt-1 block text-xl font-bold">{siteConfig.phoneDisplay}</span>
             </a>
-            <a href={`mailto:${siteConfig.email}`} className="border border-goldline bg-cream px-5 py-4 font-bold text-walnut transition hover:text-champagne">
-              {siteConfig.email}
+            <a href={`mailto:${siteConfig.email}`} className="block py-5 transition hover:text-champagne">
+              <span className="block text-sm text-taupe">E-mail</span>
+              <span className="mt-1 block break-all font-bold">{siteConfig.email}</span>
             </a>
           </div>
-          <div className="mt-7 border-t border-goldline pt-5">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-champagne">
-              Zone
-            </p>
-            <p className="mt-2 leading-7 text-taupe">
-              Ile-de-France et alentours selon la nature du chantier.
-            </p>
-          </div>
+          <p className="mt-6 text-sm font-bold">Zone d&apos;intervention</p>
+          <p className="mt-2 leading-7 text-taupe">Ile-de-France et alentours selon la nature du chantier.</p>
+          {image && <div className="relative mt-8 aspect-[4/3] overflow-hidden rounded bg-ivory">
+            <Image src={assetPath(image)} alt="Piece preparee et finitions murales" fill sizes="(min-width: 1024px) 35vw, 100vw" className="object-cover" />
+          </div>}
         </aside>
-
-        <form className="border border-goldline bg-ivory p-6 shadow-soft md:p-8">
-          <div className="grid gap-4 md:grid-cols-2">
-            <label className="grid gap-2 text-sm font-bold text-walnut">
-              Nom
-              <input className="border border-goldline bg-warm px-4 py-3 font-normal text-walnut outline-none transition focus:border-champagne" placeholder="Votre nom" />
-            </label>
-            <label className="grid gap-2 text-sm font-bold text-walnut">
-              Telephone
-              <input className="border border-goldline bg-warm px-4 py-3 font-normal text-walnut outline-none transition focus:border-champagne" placeholder="Votre telephone" />
-            </label>
-            <label className="grid gap-2 text-sm font-bold text-walnut md:col-span-2">
-              Type de travaux
-              <input className="border border-goldline bg-warm px-4 py-3 font-normal text-walnut outline-none transition focus:border-champagne" placeholder="Cloison, plafond, isolation, bandes..." />
-            </label>
-            <label className="grid gap-2 text-sm font-bold text-walnut md:col-span-2">
-              Message
-              <textarea className="min-h-40 border border-goldline bg-warm px-4 py-3 font-normal text-walnut outline-none transition focus:border-champagne" placeholder="Ville, surface approximative, contraintes, delai souhaite..." />
-            </label>
-          </div>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <button type="button" className="bg-champagne px-6 py-3.5 font-bold text-white shadow-gold transition hover:-translate-y-0.5 hover:bg-honey">
-              Envoyer la demande
-            </button>
-            <a href="tel:+33609505563" className="border border-goldline bg-warm px-6 py-3.5 text-center font-bold text-walnut transition hover:border-champagne hover:text-champagne">
-              Appeler maintenant
-            </a>
-          </div>
-        </form>
+        <ContactForm endpoint={siteConfig.formspreeEndpoint} />
       </section>
     </main>
   );

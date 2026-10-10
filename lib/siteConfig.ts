@@ -5,4 +5,6 @@ export const siteConfig = {
   phoneDisplay: "06 09 50 55 63",
   phoneHref: "tel:+33609505563",
   logo: "/images/iconic-p-solutions-logo-transparent.png",
+  formspreeEndpoint:
+    process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || "https://formspree.io/f/xzedgvjp",
 } as const;
