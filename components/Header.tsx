@@ -10,6 +10,7 @@ const navItems = [
   { href: "/services", label: "Prestations" },
   { href: "/realisations", label: "Realisations" },
   { href: "/a-propos", label: "A propos" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {
@@ -26,7 +27,7 @@ export function Header() {
             </span>
           </Link>
 
-          <div className="hidden items-center gap-9 text-sm font-semibold text-walnut lg:flex">
+          <div className="hidden items-center gap-5 text-sm font-semibold text-walnut lg:flex xl:gap-9">
             {navItems.map((item) => (
               <Link
                 key={item.href}
